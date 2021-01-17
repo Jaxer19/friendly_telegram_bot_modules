@@ -4,12 +4,12 @@ import random
 
 @loader.tds
 class YesNoMod(loader.Module):
-    """Помогает вам сделать важный жизненный выбор"""
+    """Помогает вам сделать жизненный выбор"""
     strings = {"name": "YesNo"}
 
     @loader.unrestricted
-    async def yesnocmd(self, message):
+    async def yncmd(self, message):
         """Делает выбор жизни"""
-        list = ["Yes", "No", "Of course yes", "Of course no"]
+        list = ["Yes", "No"]
         decision = random.choice(list)
         await message.edit(str(decision))
